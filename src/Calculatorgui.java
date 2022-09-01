@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 public class Calculatorgui implements ActionListener {
 
-    double number, result = 0;
+    double number, answer = 0;
     int calculation;
 
     JFrame frame = new JFrame("calculator");
@@ -339,27 +339,42 @@ public class Calculatorgui implements ActionListener {
             number = Double.parseDouble(textField.getText());
             switch (calculation) {
                 case 1:
-                    result = num1 + num2 + kajsdnkj;
+                    answer = number + Double.parseDouble(textField.getText());
+                    if (Double.toString(answer).endsWith(".0")) {
+                        textField.setText(Double.toString(answer).replace(".0", ""));
+                    } else {
+                        textField.setText(Double.toString(answer));
+                    }
+                    label.setText("");
                     break;
                 case 2:
-                    result = num1 - num2;
+                    answer = number - Double.parseDouble(textField.getText());
+                    if (Double.toString(answer).endsWith(".0")) {
+                        textField.setText(Double.toString(answer).replace(".0", ""));
+                    } else {
+                        textField.setText(Double.toString(answer));
+                    }
+                    label.setText("");
                     break;
                 case 3:
-                    result = num1 * num2;
+                    answer = number * Double.parseDouble(textField.getText());
+                    if (Double.toString(answer).endsWith(".0")) {
+                        textField.setText(Double.toString(answer).replace(".0", ""));
+                    } else {
+                        textField.setText(Double.toString(answer));
+                    }
+                    label.setText("");
                     break;
                 case 4:
-                    result = num1 / num2;
+                    answer = number / Double.parseDouble(textField.getText());
+                    if (Double.toString(answer).endsWith(".0")) {
+                        textField.setText(Double.toString(answer).replace(".0", ""));
+                    } else {
+                        textField.setText(Double.toString(answer));
+                    }
+                    label.setText("");
                     break;
-
             }
-            if (Double.toString(result).endsWith(".0")) {
-                textField.setText(Double.toString(result).replace(".0", ""));
-
-            } else {
-                textField.setText(Double.toString(result));
-            }
-            label.setText("");
-            num1 = result;
         }
 
     }
