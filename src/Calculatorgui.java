@@ -339,7 +339,7 @@ public class Calculatorgui implements ActionListener {
             number = Double.parseDouble(textField.getText());
             switch (calculation) {
                 case 1:
-                    result = num1 + num2;
+                    result = num1 + num2 + kajsdnkj;
                     break;
                 case 2:
                     result = num1 - num2;
